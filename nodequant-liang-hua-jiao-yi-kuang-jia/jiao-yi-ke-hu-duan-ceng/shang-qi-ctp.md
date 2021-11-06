@@ -11,5 +11,5 @@
 
 NodeQuant是否完成支持：已经完成支持
 
-NodeQuant上期CTP交易客户端支持环境： 1.Windows 7系统安装32位或64位 Node.js 8 2.Windows 10系统安装32位或64位 Node.js 8 3.Linux 系统安装64位的Node.js 8
+NodeQuant上期CTP交易客户端支持环境： 1. Docker中的Linux系统64位 Node.js 10，请看[搭建Docker/Linux运行环境](https://github.com/zhangshuiyong/nodequant-doc/blob/main/linux-run.md)
 
