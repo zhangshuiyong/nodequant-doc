@@ -11,5 +11,5 @@
 
 NodeQuant是否完成支持：已经完成支持
 
-NodeQuant上期CTP交易客户端支持环境： 1. Docker/Linux系统64位/Node.js 10/CTP 6.3.15，请看[搭建Docker/Linux运行环境](https://github.com/zhangshuiyong/nodequant-doc/blob/main/linux-run.md)
+NodeQuant上期CTP交易客户端支持环境： 1. Docker/Linux系统x86_64/Node.js 10/CTP 6.3.15，请看[搭建Docker/Linux运行环境](https://github.com/zhangshuiyong/nodequant-doc/blob/main/linux-run.md)
 
