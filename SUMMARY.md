@@ -14,5 +14,4 @@
 * [快速入门](kuai-su-ru-men.md)
 * [策略例子](ce-lve-li-zi.md)
 * [Node.js量化策略开发扩展库](node.js-liang-hua-ce-lve-kai-fa-kuo-zhan-ku.md)
-* [NodeQuant量化交流](nodequant-liang-hua-jiao-liu.md)
 
