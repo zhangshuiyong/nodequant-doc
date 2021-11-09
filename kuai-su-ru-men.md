@@ -10,7 +10,7 @@
 
 以下展示如何在WebStorm中编写并且运行一个DemoStrategy策略
 
-#### 定义DemoStrategy策略： {#定义demostrategy策略}
+#### 定义DemoStrategy策略：
 
 * 策略模板名字：DemoStrategy
 * 策略实例名字：Demo
@@ -18,26 +18,17 @@
 * 交易周期：1分钟K线
 * 交易客户端：CTP
 
-#### 根据交易合约选择对应的交易客户端： {#根据交易合约选择对应的交易客户端}
+#### 配置DemoStrategy策略：
 
-* 对应交易客户端：CTP
-* 期货经纪商brokerID：9999
-* 账号：888888
-* 密码：888888
-* 期货经纪商的行情服务器地址：tcp://218.202.237.33:10012
-* 期货经纪商的行情服务器地址：tcp://218.202.237.33:10002
-
-#### 配置DemoStrategy策略： {#配置demostrategy策略}
-
-1. userConfig.js为用户配置文件。配置文件结构为Json格式的数据。什么是Json格式？[https://baike.baidu.com/item/JSON/2462549?fr=aladdin](https://baike.baidu.com/item/JSON/2462549?fr=aladdin)
+1. [userConfig.js](https://github.com/zhangshuiyong/nodequant/blob/master/nodequant/userConfig.js)为用户配置文件。配置文件结构为Json格式的数据。什么是Json格式？[https://baike.baidu.com/item/JSON/2462549?fr=aladdin](https://baike.baidu.com/item/JSON/2462549?fr=aladdin)
 2. ClientConfig为交易客户端配置项。
 3. StrategyConfig为策略配置项。
 4. 可在ClientConfig中配置多个交易客户端。可在StrategyConfig配置多个策略。
-5. 如下图，ClientConfig中配置了CTP交易客户端。在StrategyConfig配置了DemoStrategy策略。在StrategyConfig配置项中，**name**是策略的名字，策略的名字是策略的唯一标识。**className**是策略的类名，是已经写好的策略逻辑。相同的className，不同的name\(策略唯一标识\)，系统会创建两个策略实例。**symbols**是策略的交易合约，可配置多个交易合约，策略的OnTick事件函数会接收到多个交易合约的Tick。每个交易合约需要配置对应的交易客户端**clientName**，因为不仅仅CTP交易客户端可以交易商品期货，飞鼠Sgit也可以交易商品期货。**BarType**是K线周期类型，如果策略需要分钟K线行情，可配置**BarType:KBarType.Minute**，支持的K线周期有秒、分钟、小时。**BarInterval**是K线周期的间隔，如1分钟K线，可配置**BarInterval:1**。BarInterval必须是整数。
+5. 如下图，ClientConfig中配置了CTP交易客户端。在StrategyConfig配置了DemoStrategy策略。在StrategyConfig配置项中，**name**是策略的名字，策略的名字是策略的唯一标识。**className**是策略的类名，是已经写好的策略逻辑。相同的className，不同的name\(策略唯一标识\)，系统会创建两个策略实例。**symbols**是策略的交易合约，可配置多个交易合约，策略的OnTick事件函数会接收到多个交易合约的Tick。每个交易合约需要配置对应的交易客户端**clientName**，因为不仅仅CTP交易客户端可以交易商品期货（将来如果支持飞鼠Sgit客户端也可以交易商品期货）。**BarType**是K线周期类型，如果策略需要分钟K线行情，可配置**BarType:KBarType.Minute**，支持的K线周期有秒、分钟、小时。**BarInterval**是K线周期的间隔，如1分钟K线，可配置**BarInterval:1**。BarInterval必须是整数。
 
-![userConfig](http://uploadimg.markbj.com/static/resource/image/book/0f6c72da9da611e7866000163e13356e.PNG?ynotemdtimestamp=1533340532755)
+![image](https://user-images.githubusercontent.com/1655233/140939022-4d31acde-fa9a-41a2-a661-30e7e66e186b.png)
 
-#### 编写DemoStrategy策略： {#编写demostrategy策略}
+#### 编写DemoStrategy策略：
 
 在strategy文件夹下创建DemoStrategy.js文件。这里要特别提醒的是：一、所有策略要是js文件。二、所有策略js文件都需要创建在strategy文件夹下，因为策略的基类baseStrategy.js文件在strategy文件夹下，所有策略都根据与baseStrategy.js文件的相对路径找到策略基类才能继承它。三、所有的策略类都要继承策略基类。
 
@@ -102,7 +93,7 @@
 >  module.exports=DemoStrategy;
 > ```
 
-### 进阶：了解策略基类BaseStrategy {#进阶了解策略基类basestrategy}
+### 进阶：了解策略基类BaseStrategy
 
 DemoStrategy虽然顺利运行。但是一个实盘策略不仅仅是接收Tick事件和K线事件，实盘策略需要下单（SendOrder）、成交事件\(OnTrade\)、订单状态事件（OnOrder）、策略的持仓（Position）、净值计算（Settlement）。以上概念都封装到基类BaseStrategy中，所以需要进一步了解BaseStrategy，BaseStrategy基类文件在NodeQuant根目录 --&gt; strategy文件夹 --&gt; baseStrategy.js文件。
 
@@ -134,9 +125,7 @@ DemoStrategy虽然顺利运行。但是一个实盘策略不仅仅是接收Tick�
 | 大商所 | 支持 | 支持 | 支持 | 支持 | 支持 |
 | 郑商所 | 支持 | 支持 | 不支持 | 支持 | 支持 |
 
-###  {#进阶查看策略运行状态查看redis数据库}
-
-### 进阶：查看策略运行状态，查看Redis数据库 {#进阶查看策略运行状态查看redis数据库}
+### 进阶：查看策略运行状态，查看Redis数据库
 
 在**搭建运行环境**的章节中，已经下载了Redis的图形化客户端，打开Redis Desktop Manager
 
