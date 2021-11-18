@@ -5,7 +5,7 @@
 | 描述 | 命令 |
 | :--- | :--- |
 | 1. PC安装docker| |
-| 2. 拉取nodequant的docker镜像| docker pull noquant/nodequant:linux_x64_node10_ctp6.3.15 |
+| 2. 拉取nodequant的docker镜像（CTP 6.3.15版本）| docker pull noquant/nodequant:linux_x64_node10_ctp6.3.15 |
 | 3. 启动一个nodequant的容器 | docker run -d --name nodequant --workdir /root -it noquant/nodequant:linux_x64_node10_ctp6.3.15 |
 | 4. 登入容器 | docker exec -it nodequant bash |
 | 5. 启动redis-server | nohup redis-server ./nodequant-redis.conf & |
