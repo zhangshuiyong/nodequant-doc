@@ -1,6 +1,6 @@
 # Node.js量化策略开发扩展库
 
-### Node.js科学计算库 {#nodejs科学计算库}
+### Node.js科学计算库
 
 * [mathjs](https://github.com/josdejong/mathjs) - An extensive math library for JavaScript and Node.js.
 * [numeric](https://github.com/sloisel/numeric) - Numerical analysis in Javascript.
@@ -13,11 +13,11 @@
 * [node-svm](https://github.com/nicolaspanel/node-svm) - Support Vector Machines for nodejs
 * [numjs](https://github.com/nicolaspanel/numjs) - Like NumPy, in JavaScript
 
-### Node.js多进程库 {#nodejs多进程库}
+### Node.js多进程库}
 
 * [Cluster](https://nodejs.org/dist/latest-v6.x/docs/api/cluster.html) - A single instance of Node.js runs in a single thread. To take advantage of multi-core systems the user will sometimes want to launch a cluster of Node.js processes to handle the load.
 
-### Node.js的机器学习库 {#nodejs的机器学习库}
+### Node.js的机器学习库
 
 * [machine\_learning](https://github.com/junku901/machine_learning) - Machine learning library for Node.js [http://joonku.com/project/machine\_learning](http://joonku.com/project/machine_learning)
 * [各语言机器学习库整理](https://www.douban.com/group/topic/89453462/)
