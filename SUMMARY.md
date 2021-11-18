@@ -1,6 +1,5 @@
 # Table of contents
 
-* [NodeQuant](README.md)
 * [NodeQuant系统架构](nodequant-xi-tong-jia-gou.md)
 * [NodeQuant如何支持量化交易](nodequant-ru-he-zhi-chi-liang-hua-jiao-yi.md)
 * [NodeQuant最新特性](nodequant-zui-xin-te-xing.md)
