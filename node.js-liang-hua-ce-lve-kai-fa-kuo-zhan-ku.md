@@ -13,7 +13,7 @@
 * [node-svm](https://github.com/nicolaspanel/node-svm) - Support Vector Machines for nodejs
 * [numjs](https://github.com/nicolaspanel/numjs) - Like NumPy, in JavaScript
 
-### Node.js多进程库}
+### Node.js多进程库
 
 * [Cluster](https://nodejs.org/dist/latest-v6.x/docs/api/cluster.html) - A single instance of Node.js runs in a single thread. To take advantage of multi-core systems the user will sometimes want to launch a cluster of Node.js processes to handle the load.
 
